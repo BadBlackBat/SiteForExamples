@@ -1,0 +1,155 @@
+@import '_variables.scss';
+
+.special__swiper {
+  width: 100%;
+  height: auto;
+
+  &-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 77px;
+    position: absolute;
+    top: -58px;
+    right: 0;
+  }
+}
+
+.special__wrap {
+  position: relative;
+}
+
+.special__btn-next,
+.special__btn-prev {
+  cursor: pointer;
+}
+
+.special__card {
+    height: auto;
+    justify-content: space-between;
+    width: auto;
+
+    &-content {
+      width: 236px;
+    }
+
+    &-big {
+    .special__card-content {
+      width: 564px;
+    }
+
+    .special__card-image {
+      margin-top: -35px;
+    }
+
+    .special__card-scheme {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+
+  &-sale {
+    position: relative;
+    top: 0;
+    left: -30px;
+    background-image: url(../img/svg/spec-flag.svg);
+    background-repeat: no-repeat;
+    width: 92px;
+    color: white;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  &-image {
+    margin-bottom: 16px;
+    margin-top: -8px;
+    align-self: center;
+  }
+  
+  &-price{
+    margin: 0;
+    line-height: 130%;
+    font-weight: 400;
+    margin-bottom: 22px;
+  }
+
+  &-newprice {
+    font-size: 18px;
+    color: $colorSecondary;
+    margin-right: 30px;
+  }
+
+  &-oldprice {
+    font-size: 16px;
+    color: $colorGrey;
+    text-decoration: line-through;
+  }
+}
+
+
+.special__card:nth-child(5) {
+  .special__card-image {
+    margin-top: -13px;
+  }
+}
+
+@media (max-width: 1360px) {
+  
+  .special {
+    max-width: 1360px;
+    padding: 0 36px;
+    box-sizing: border-box;
+
+    &__card-big {
+      .special__card-content {
+        width: 236px;
+      }
+
+      .special__card-image {
+        width: 254px;
+        margin-top: 0;
+      }
+    }
+
+    &__card-scheme {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .special {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+
+@media (max-width: 700px) {
+  .special {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  .special {
+
+    &__swiper {
+      margin-bottom: $gutter16;
+      
+      &-navigation {
+        position: initial;
+        margin: 0 auto;
+      }
+    }
+    
+    &__card-content.card-content {
+      max-width: 225px;
+      width: 100%;
+    }
+  }
+}

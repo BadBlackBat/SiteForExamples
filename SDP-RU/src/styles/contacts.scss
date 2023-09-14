@@ -1,0 +1,241 @@
+@import '_variables.scss';
+
+.contacts {
+
+  .section__title {
+    line-height: 40px;
+    margin-bottom: 13px;
+  }
+
+  &__form-search {
+    display: flex;
+    margin-bottom: $gutter32;
+  }
+  
+  &__input {
+    max-width: 624px;
+    margin-bottom: 0;
+    margin-right: $gutter32;
+  }
+
+  &__btn {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    padding: 19px 35px;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 510px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-79-copyrights-pane  {
+  opacity: 0;
+  z-index: -10;
+  display: none;
+}
+
+.ymaps-2-1-79-balloon.ymaps-2-1-79-balloon_layout_normal.ymaps-2-1-79-balloon_to_top.ymaps-2-1-79-i-custom-scroll {
+  width: 343px;
+  height: 284px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  font-style: normal;
+  transition: opacity .3s ease-in-out;
+  top: -30px;
+}
+
+.ymaps-2-1-79-balloon__layout {
+  border-radius: 30px;
+}
+
+.ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
+  margin: 0;
+  padding: 0;
+}
+
+.ymaps-2-1-79-balloon__close-button {
+  width: 12px;
+  height: 12px;
+}
+// .ymaps-2-1-79-balloon__close,
+// .ymaps-2-1-79-balloon__close-button {
+//   width: 12px;
+//   height: 12px;
+// }
+
+// .ymaps-2-1-79-balloon__close-button
+
+.ymaps-2-1-79-placemark-overlay .ymaps-2-1-79-user-selection-none {
+  width: 32px;
+  height: 32px;
+}
+
+.ymaps-2-1-79-balloon__close {
+  top: 5px;
+  right: 10px
+}
+
+.popap {
+  width: 343px;
+  height: 284px;
+
+  &__wrap {
+    padding: 30px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 7px;
+  }
+
+  &__address {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  &__phone {
+    background-image:  url(../img/svg/phone.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    span {
+      color: $colorSecondary;
+      font-size: 14px;
+      line-height: 17px;
+      padding-left: 22px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 14px;
+    line-height: 25px;
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+      margin-top: 26px;
+    }
+
+    span {
+      color: $colorGrey;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .contacts {
+    max-width: 1360px;
+    padding: 0 36px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 980px) {
+  .contacts {
+    padding: 0 72px;
+
+    &__btn {
+      margin-right: 67px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .contacts {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 537px) {
+  .contacts {
+    .section__title {
+      margin-bottom: $gutter16;
+      line-height: 24px;
+    }
+
+    &__form-search {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__input {
+      max-width: 296px;
+      margin: 0;
+      margin-bottom: $gutter16;
+    }
+
+    .popap {
+      font-style: normal;
+      width: 232px;
+      height: 260px;
+
+      &__wrap {
+        padding: 24px 20px 20px;
+      }
+
+      &__title {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 5px;
+      }
+
+      &__address {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 12px;
+      }
+
+      &__phone {
+        span {
+          line-height: 22px;
+        }
+      }
+
+      &__descr {
+        font-size: 12px;
+
+        &:not(:last-child) {
+          line-height: 22px;
+          margin-bottom: 26px;
+          margin-top: 22px;
+        }
+
+        &:last-child {
+          line-height: 17px;
+          max-width: 170px;
+        }
+      }
+    }
+
+    .ymaps-2-1-79-balloon.ymaps-2-1-79-balloon_layout_normal.ymaps-2-1-79-balloon_to_top.ymaps-2-1-79-i-custom-scroll {
+      width: 232px;
+      height: 260px;
+    }
+  }
+}

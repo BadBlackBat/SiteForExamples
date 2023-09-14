@@ -1,0 +1,62 @@
+@import '_variables.scss';
+
+.card-top {
+  margin: 0 -25px 16px;
+  align-self: center;
+  height: 161px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-price {
+  color: $colorGreyShade;
+  font-size: 16px;
+  line-height: 130%;
+  margin-bottom: 21px;
+}
+
+.card-rating {
+  background-image: url(../img/svg/star.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 21px;
+  color: $colorSecondary;
+  margin-left: 10px;
+  margin-right: 25px;
+}
+
+
+
+@media (max-width:580px) {
+  .card-top {
+    min-height: 80px;
+    max-height: 161px;
+    height: 100%;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .card-rating {
+    margin-bottom: 11px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .card-content {
+    width: 108px;
+  }
+
+  .card-title,
+  .card-price {
+    margin-bottom: $gutter16;
+  }
+
+  .card-btn {
+    padding: 12px 25px;
+  }
+}

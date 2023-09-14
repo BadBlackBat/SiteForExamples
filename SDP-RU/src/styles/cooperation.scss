@@ -1,0 +1,197 @@
+@import '_variables.scss';
+
+.cooperation {
+
+  padding: 0 36px;
+  
+  .section__title {
+    font-weight: 400;
+    margin-bottom: $gutter32;
+  }
+  
+  &__chapter {
+    max-width: 845px;
+    color: $colorGreyShade;
+    line-height: 29px;
+
+    &:not(:last-child) {
+      margin-bottom: $gutter32;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: $colorBlack;
+  }
+
+  &__descr {
+    margin: 0;
+  }
+
+  .benefit__item {
+    padding-left: 37px;
+    max-width: 566px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    line-height: 27px;
+
+    // &:not(:last-child) {
+    //   margin-bottom: 12px;
+    // }
+
+    &:first-child {
+      background-image: url(../img/svg/providers-network.svg);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../img/svg/providers-briefcase.svg);
+    }
+
+    &:last-child {
+      background-image: url(../img/svg/providers-git-pull-request.svg);
+    }
+  }
+
+  .advantage__descr {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 12px;
+      color: $colorSecondary;
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
+
+  .warranty {
+    &__list {
+      max-width: 786px;
+      padding-left: 18px;
+      margin: 0;
+      margin-bottom: $gutter32;
+    }
+
+    &__item {
+      padding-left: 8px;
+
+      &::marker {
+        color: $colorSecondary;
+        font-weight: 600;
+        line-height: 29px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &__descr {
+      max-width: 624px;
+      width: 100%;
+      padding: 22px 0;
+      padding-left: 109px;
+      background-image: url(../img/providers-pen.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+
+      &-text {
+        margin: 0;
+        font-size: 24px;
+        line-height: 36px;
+        color: $colorBlack;
+        max-width: 515px;
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .cooperation {
+    padding-left: 72px;
+    padding-right: 72px;
+
+    &__title {
+      line-height: 33px;
+    }
+
+    .advantage,
+    .warranty__list {
+      max-width: 597px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .cooperation {
+    padding-left: 12px;
+    padding-right: 12px;
+    
+    .warranty__descr-text {
+      max-width: 400px;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .cooperation { 
+    
+    &__chapter {
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .benefit__item {
+      line-height: 24px;
+    }
+
+    .advantage {
+      .cooperation__title {
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      .advantage__descr {
+        max-width: 285px;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .warranty {
+
+      .warranty__item {
+        max-width: 257px;
+        line-height: 178%;
+      }
+    }
+
+    .warranty__descr {
+      box-sizing: border-box;
+      background-size: 36px 54px;
+      height: 72px;
+      padding: 0;
+      padding-left: 52px;
+
+      &-text {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 230px;
+      }
+    }
+  }
+}

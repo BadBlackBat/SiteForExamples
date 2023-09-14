@@ -1,0 +1,140 @@
+@import '_variables.scss';
+.rating {
+  display: flex;
+  flex-direction: column;
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gutter32;
+    grid-auto-flow: row;
+    margin-bottom: $gutter32;
+  }
+
+  &__btn {
+    padding-left: 42px;
+    padding-right: 42px;
+    align-self: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .25);
+  }
+}
+
+@media (max-width: 1360px) {
+  .rating {
+    max-width: 1360px;
+    padding: 0 36px;
+    box-sizing: border-box;
+
+    &__wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__card:nth-child(n+7) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .rating {
+    padding-left: 72px;
+    padding-right: 72px;
+
+    &__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .rating {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    &__wrapper {
+      gap: $gutter16;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .rating__card {
+    padding: $gutter16;
+    
+    &-rating {
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    &-title {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    &-top {
+      min-height: 70px;
+      margin-bottom: 18px;
+    }
+
+    &-price {
+      line-height: 78%;
+    }
+
+    &-btn {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .rating {
+
+    &__wrapper {
+      margin-bottom: $gutter32;
+    }
+
+    &__btn {
+      width: 296px;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+  }
+
+  // .rating__card-top,
+  // .card-top {
+  //   min-height: 80px;
+  //   max-height: 161px;
+  //   height: auto;
+  //   margin-bottom: 10px;
+  //   width: 100%;
+  // }
+
+  // .rating__card-rating,
+  // .card-rating {
+  //   margin-bottom: 11px;
+  // }
+
+  // .rating__card-title,
+  // .card-title {
+  //   font-size: 16px;
+  //   line-height: 21px;
+  // }
+
+  // .rating__card-content,
+  // .card-content {
+  //   width: 108px;
+  // }
+
+  // .rating__card-title,
+  // .rating__card-price,
+  // .card-title,
+  // .card-price {
+  //   margin-bottom: $gutter16;
+  // }
+
+  // .rating__card-btn,
+  // .card-btn {
+  //   padding: 12px 25px;
+  // }
+}

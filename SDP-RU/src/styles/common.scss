@@ -1,0 +1,472 @@
+@import '_variables.scss';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  max-width: 100%;
+  min-width: 320px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 0 auto;
+  color: $colorBlack;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: outline .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+main {
+  margin-bottom: $gutter70;
+}
+
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.vusually-hidden {
+  position: absolute;
+  opacity: 0;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.banner,
+.new__collection {
+  max-width: 100%;
+}
+
+section:not(:last-child) {
+  margin-bottom: $gutter70;
+}
+
+.section__title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 26px;
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: $colorGreyLight;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.card-hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.title-card {
+  margin: 0;
+  font-size: 24px;
+  line-height: 130%;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn-buy,
+.buy-style {
+  box-sizing: border-box;
+  padding: 17px 35px;
+  border-radius: 10px;
+  border: 2px solid $colorPrimary;
+  color: $colorPrimary;
+  font-weight: 600;
+  line-height: 16px;
+  transition: background-color .3s ease-out, color .3s ease-out;
+}
+
+.btn-primary {
+  background-color: $colorPrimary;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  padding: 22px 50px;
+  transition: background-color .3s ease-out, outline .1s ease-out;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.btn-buy:focus,
+.buy-style:focus {
+  color: white;
+  background-color: $colorPrimaryLight;
+  transition: background-color .3s ease-out, color .3s ease-out;
+}
+
+.btn-buy:hover,
+.buy-style:hover {
+  color: white;
+  background-color: $colorPrimary;
+  transition: background-color .3s ease-out, color .3s ease-out;
+}
+
+.btn-buy:active,
+.buy-style:active {
+  color: white;
+  background-color: $colorPrimaryShade;
+  border-color: transparent;
+  transition: background-color .3s ease-out, color .3s ease-out;
+}
+
+.btn-primary:focus {
+  background-color: $colorPrimaryLight;
+  outline: 2px solid $colorPrimaryShade;
+  transition: background-color .3s ease-out, outline .1s ease-out;
+}
+
+.btn-primary:hover {
+  background-color: $colorPrimaryLight;
+  outline: none;
+  transition: background-color .3s ease-out, outline .1s ease-out;
+}
+
+.btn-primary:active {
+  background-color: $colorPrimaryShade;
+  outline: none;
+  transition: background-color .3s ease-out, outline .1s ease-out;
+}
+
+.swiper-btn {
+  svg {
+    g {
+      path,
+      circle {
+        stroke: $colorPrimary;
+        transition: stroke .3s ease-out, fill .3s ease-out;
+      }
+    }
+  }
+}
+
+.swiper-btn:focus {
+  svg {
+    g {
+      path {
+        stroke: white;
+        transition: stroke .3s ease-out;
+      }
+      circle {
+        fill: $colorPrimaryLight;
+        transition: fill .3s ease-out;
+      }
+    }
+  }
+}
+
+.swiper-btn:hover {
+  svg {
+    g {
+      path {
+        stroke: white;
+        transition: stroke .3s ease-out;
+      }
+      circle {
+        fill: $colorPrimary;
+        transition: fill .3s ease-out;
+      }
+    }
+  }
+}
+
+.swiper-btn:active {
+  svg {
+    g {
+      path {
+        stroke: white;
+        transition: stroke .3s ease-out;
+      }
+      circle {
+        fill: $colorPrimaryShade;
+        stroke: $colorPrimaryShade;
+        transition: fill .3s ease-out, stroke .3s ease-out;
+      }
+    }
+  }
+}
+
+.swiper-btn.swiper-button-disabled,
+.swiper-btn.swiper-button-disabled:focus,
+.swiper-btn.swiper-button-disabled:hover, 
+.swiper-btn.swiper-button-disabled:active {
+  cursor: not-allowed;
+  svg {
+    g {
+      path,
+      circle {
+        fill: transparent;
+        stroke: $colorGrey;
+      }
+    }
+  }
+}
+
+.label-site,
+.checkbox-site {
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-site {
+  display: none;
+}
+
+.checkbox-custom {
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: 1px solid $colorGrey;
+  transition: background-color .3s ease-out;
+}
+
+.checkbox-site:checked + .checkbox-custom {
+  background-color: $colorPrimary;
+  background-image: url(../img/svg/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: background-color .3s ease-out;
+}
+
+.input-site {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 7px 18px;
+  line-height: 40px;
+  border-radius: 10px;
+  background-color: $colorGreyLight;
+  width: 100%;
+  border: none;
+  transition: outline .2s ease-out, background-color .3s ease-out;
+
+  &::placeholder {
+    color: $colorGrey;
+    font-size: 16px;
+  }
+  
+  &:focus {
+    outline: 1px solid $colorPrimary;
+    transition: outline .2s ease-out;
+  }
+  
+  &:hover {
+    background-color: $colorMdGrey;
+    outline: none;
+    transition: background-color .3s ease-out;
+  }
+  
+  &:active {
+    outline: 1px solid $colorGreenInput;
+    transition: outline .2s ease-out;
+  }
+}
+
+.link-catalog {
+    color: $colorPrimary;
+    line-height: 120%;
+    font-weight: 700;
+    margin-top: auto;
+    transition: color .3s ease-out;
+
+    svg {
+      vertical-align: middle;
+      padding-left: 5px;
+      g {
+        path,
+        circle {
+          transition: stroke .3s ease-out, fill .3s ease-out;
+        }
+      }
+    }
+    
+    &:focus {
+      span {
+        border-bottom: 2px solid;
+      }
+      svg {
+        g {
+          path {
+            stroke: white;
+            transition: stroke .3s ease-out;
+          }
+          circle {
+            fill: $colorPrimaryLight;
+            transition: fill .3s ease-out;
+          }
+        }
+      }
+    }
+  
+  &:hover {
+    span {
+      border-bottom: 2px solid $colorPrimary;
+      transition: border .1s ease-out;
+    }
+    svg {
+      g {
+        path {
+          stroke: white;
+          transition: stroke .3s ease-out;
+        }
+        circle {
+          fill: $colorPrimary;
+          transition: fill .3s ease-out;
+        }
+      }
+    }
+  }
+  
+  &:active {
+    span {
+      color: $colorPrimaryShade;
+      border-bottom: 2px solid;
+      transition: color .3s ease-out, border .1s ease-out;
+    }
+    svg {
+      g {
+        path {
+          stroke: white;
+          transition: stroke .3s ease-out;
+        }
+        circle {
+          fill: $colorPrimaryShade;
+          stroke: $colorPrimaryShade;
+          transition: fill .3s ease-out, stroke .3s ease-out;
+        }
+      }
+    }
+  }
+}
+
+.form-site {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.agree-descr {
+  margin-left: 22px;
+}
+
+.agree-link {
+  color: $colorPrimary;
+  line-height: 17px;
+  text-decoration: underline;
+  transition: color .3s ease-out, background-color .3s ease-out;
+  
+  &:focus {
+    color: $colorPrimaryShade;
+    background-color: $colorPrimaryLight;
+    transition: color .3s ease-out, background-color .3s ease-out;
+  }
+  
+  &:hover {
+    color: $colorPrimaryLight;
+    background-color: transparent;
+    transition: color .3s ease-out, background-color .3s ease-out;
+  }
+  
+  &:active {
+    color: $colorPrimaryShade;
+    background-color: transparent;
+    transition: color .3s ease-out, background-color .3s ease-out;
+  }
+}
+
+
+
+
+@media (max-width: 1360px) {
+  .card {
+    height: auto;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 580px) {
+  .section__title {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .link-catalog {
+    span {
+      display: none;
+    }
+  }
+
+  .link-desktop {
+    display: none;
+  }
+
+  .agree-descr {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

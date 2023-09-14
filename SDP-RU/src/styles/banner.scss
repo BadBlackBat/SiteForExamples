@@ -1,0 +1,131 @@
+@import '_variables.scss';
+
+.banner__swiper {
+  width: 100%;
+  height: auto;
+}
+
+.banner__slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-content {
+    padding: 80px 36px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &-descr {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 65.5px;
+    color: $colorGrey;
+    max-width: 466px;
+    margin-bottom: 49px;
+  }
+}
+
+.banner__btn-mobile {
+  display: none;
+}
+
+.banner01 {
+  background-image: url(../img/banner01.webp);
+}
+
+.banner02 {
+  background-image: url(../img/banner02.webp);
+}
+
+.banner03 {
+  background-image: url(../img/banner03.webp);
+
+  .banner__slide-descr {
+    color: white;
+    max-width: 587px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .banner01 {
+    background-image: url(../img/banner01-1024.webp);
+  }
+  
+  .banner02 {
+    background-image: url(../img/banner02-1024.webp);
+  }
+
+  .banner03 {
+    background-image: url(../img/banner03-1024.webp);
+  }
+}
+
+@media (max-width: 980px) {
+  .banner__slide-content {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner01 {
+    background-image: url(../img/banner01-768.webp);
+  }
+  
+  .banner02 {
+    background-image: url(../img/banner02-768.webp);
+  }
+
+  .banner03 {
+    background-image: url(../img/banner03-768.webp);
+  }
+}
+
+@media (max-width: 700px) {
+  .banner__slide-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 580px) {
+  .banner__slide-btn {
+    display: none;
+  }
+  
+  .banner__btn-mobile {
+    display: block;
+    width: 296px;
+    margin: 0 auto;
+  }
+
+  .banner__slide-content {
+    box-sizing: border-box;
+    min-height: 210px;
+    padding: 30px;
+  }
+
+  .banner__slide-descr {
+    font-size: 20px;
+    line-height: 27.5px;
+    max-width: 204px;
+    margin-bottom: 0
+  }
+
+  .banner01 {
+    background-image: url(../img/banner01-mobile.webp);
+  }
+  
+  .banner02 {
+    background-image: url(../img/banner02-mobile.webp);
+  }
+
+  .banner03 {
+    background-image: url(../img/banner03-mobile.webp);
+  }
+
+  .banner__swiper {
+    margin-bottom: $gutter32;
+  }
+}

@@ -1,0 +1,108 @@
+@import '_variables.scss';
+
+.useful {
+  &__wrap {
+    position: relative;
+  }
+
+  &__swiper {
+    width: 100%;
+    height: auto;
+
+    &-navigation {
+      display: flex;
+      justify-content: space-between;
+      width: 77px;
+      position: absolute;
+      top: -58px;
+      right: 0;
+    }
+  }
+
+  &__btn-next,
+  &__btn-prev {
+    cursor: pointer;
+  }
+
+  &__card {
+    box-sizing: border-box;
+    background-color: $colorGreyLight;
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &-image {
+      img {
+        height: auto;
+      }
+    }
+
+    &-content {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      height: 100%;
+      min-height: 242px;
+    }
+
+    &-descr {
+      margin: 0;
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 33px;
+      max-width: 528px;
+    }
+
+    &-btn {
+      margin-top: auto;
+      box-sizing: border-box;
+    }
+  }
+
+}
+
+@media (max-width: 1360px) {
+  .useful {
+    max-width: 1360px;
+    padding: 0 36px;
+
+    &__card-descr {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .useful {
+    padding: 0 72px;
+  }
+}
+
+@media (max-width: 700px) {
+  .useful {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  // .useful__card-descr {
+  //   font-size: 16px;
+  //   line-height: 21.2px;
+  // }
+
+  .useful__swiper {
+    margin-bottom: $gutter16;
+
+    &-navigation {
+      position: initial;
+      margin: 0 auto;
+    }
+  }
+
+
+}
